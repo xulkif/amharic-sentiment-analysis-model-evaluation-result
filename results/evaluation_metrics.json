@@ -1,0 +1,80 @@
+{
+  "experiment": {
+    "dataset": "rasyosef/amharic-sentiment",
+    "dataset_split": "test",
+    "dataset_fingerprint": "2c74b3663ba56b52",
+    "text_column": "clean_tweet",
+    "label_column": "label",
+    "dataset_label_order": [
+      "negative",
+      "positive"
+    ],
+    "model": "rasyosef/bert-medium-amharic-finetuned-sentiment",
+    "model_commit_hash": null,
+    "model_id2label": {
+      "0": "negative",
+      "1": "positive"
+    },
+    "batch_size": 8,
+    "truncation": true,
+    "device": "cpu"
+  },
+  "data_summary": {
+    "original_test_examples": 279,
+    "evaluated_examples": 279,
+    "excluded_examples": 0,
+    "excluded_rows": []
+  },
+  "metrics": {
+    "accuracy": 0.8315412186379928,
+    "macro_avg": {
+      "precision": 0.8372273310521814,
+      "recall": 0.825968992248062,
+      "f1-score": 0.828357134442452,
+      "support": 279.0
+    },
+    "weighted_avg": {
+      "precision": 0.8350562699485822,
+      "recall": 0.8315412186379928,
+      "f1-score": 0.8301167599189351,
+      "support": 279.0
+    },
+    "per_class": {
+      "negative": {
+        "precision": 0.8083832335329342,
+        "recall": 0.9,
+        "f1-score": 0.8517350157728707,
+        "support": 150.0
+      },
+      "positive": {
+        "precision": 0.8660714285714286,
+        "recall": 0.751937984496124,
+        "f1-score": 0.8049792531120332,
+        "support": 129.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        135,
+        15
+      ],
+      [
+        32,
+        97
+      ]
+    ],
+    "confusion_matrix_label_order": [
+      "negative",
+      "positive"
+    ],
+    "correct_predictions": 232,
+    "incorrect_predictions": 47
+  },
+  "software_versions": {
+    "python": "3.13.0",
+    "torch": "2.8.0+cpu",
+    "transformers": "5.20.1",
+    "datasets": "5.1.0",
+    "scikit_learn": "1.9.1"
+  }
+}
